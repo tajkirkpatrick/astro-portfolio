@@ -2,14 +2,19 @@ import { Button } from "@/components/ui/button";
 
 function Navbar() {
   return (
-    <nav>
+    <nav className="w-full">
       <div className="container mx-auto flex h-[10svh] max-w-[52rem] items-center justify-center font-hepta md:justify-between">
         <h1 className="text-center">Consumer Thoughts</h1>
         <div>
           <ul className="hidden list-none gap-x-2 md:flex">
             <li>
               <Button variant="link" asChild>
-                <a href="#" className="flex gap-x-1">
+                <a
+                  href="https://linkedin.com/in/tajkirkpatrick"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex gap-x-1"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="32"
@@ -27,7 +32,12 @@ function Navbar() {
             </li>
             <li>
               <Button variant="link" asChild>
-                <a href="#" className="flex gap-x-1">
+                <a
+                  href="https://github.com/tajkirkpatrick"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex gap-x-1"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="32"
