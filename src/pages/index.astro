@@ -1,18 +1,73 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
+import { Button } from "@/components/ui/button";
+
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main class="min-h-[90svh] max-w-[52rem] w-full container mx-auto">
-		<div class="mt-6 font-hepta">
-			<h1 class="font-bold text-4xl max-w-md">Welcome to Consumer Thoughts!</h1>
-			<p class="font-inter mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi nobis iste laboriosam quibusdam soluta corrupti, illum ea esse repellendus pariatur commodi sapiente perspiciatis minus obcaecati distinctio! Corporis, vitae! Earum, ullam?</p>
-			<p class="font-inter mt-4">Feel free to reach out if you enjoy interesting conversation!</p>
-		</div>
-		<div>
-			<h2 class="mt-6 font-hepta font-bold text-2xl tracking-wider">
-				Projects
-			</h2>
-		</div>
-	</main>
+  <main class="min-h-[90svh] max-w-[52rem] w-full container mx-auto">
+    <div class="mt-6 font-hepta">
+      <h1 class="font-bold text-4xl max-w-md">Welcome to Consumer Thoughts!</h1>
+      <p class="font-inter mt-4">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi nobis
+        iste laboriosam quibusdam soluta corrupti, illum ea esse repellendus
+        pariatur commodi sapiente perspiciatis minus obcaecati distinctio!
+        Corporis, vitae! Earum, ullam?
+      </p>
+      <p class="font-inter mt-4">
+        Feel free to reach out if you enjoy interesting conversation!
+      </p>
+    </div>
+    <div>
+      <h2 class="mt-6 font-hepta font-bold text-3xl tracking-wider">
+        My Free Time
+      </h2>
+      <div class="grid-cols-4 grid gap-4 mt-4">
+        {
+          ["test", "test2", "test3", "test4", "test5"].map((card) => (
+            <a href="/" class="col-span-4 md:col-span-2 font-inter group">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-md text-lg font-semibold group-hover:underline underline-offset-2">
+                    {card}
+                  </CardTitle>
+                  <CardDescription className="text-sm font-medium">
+                    Card Content
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+    <div class="mt-6 font-hepta">
+      <h2 class="mt-6 font-hepta font-bold text-3xl tracking-wider">
+        Articles
+      </h2>
+      {
+        ["test", "test2", "test3", "test4", "test5"].map((card) => (
+          <a href="/" class="col-span-4 md:col-span-2 font-inter group">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-md text-lg font-semibold group-hover:underline underline-offset-2">
+                  {card}
+                </CardTitle>
+                <CardDescription className="text-sm font-medium">
+                  Card Content
+                </CardDescription>
+              </CardHeader>
+            </Card>
+          </a>
+        ))
+      }
+    </div>
+  </main>
 </Layout>
