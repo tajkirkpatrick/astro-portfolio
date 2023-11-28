@@ -6,37 +6,37 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import { ModeToggle } from "@/components/mode-toggle";
-
 import Layout from "../layouts/Layout.astro";
+import { Separator } from "@/components/ui/separator";
 ---
 
 <Layout title="Welcome to Astro.">
   <main class="min-h-[90svh] max-w-[52rem] w-full container mx-auto">
     <div class="mt-6 font-hepta">
       <div
-        class="flex gap-y-2 md:gap-y-0 flex-col md:flex-row justify-between items-start"
+        class="flex gap-y-2 md:gap-y-0 flex-col md:flex-row justify-between items-center md:items-start"
       >
-        <h1 class="font-bold text-4xl max-w-md">
+        <h1 class="font-bold text-4xl max-w-md text-center md:text-start">
           Welcome to Consumer Thoughts!
         </h1>
-        <div class="flex items-end gap-x-2">
-          <ModeToggle client:load />
-          <span class="font-inter text-xs md:hidden"> Dark Mode Included</span>
-        </div>
       </div>
-      <p class="font-inter mt-4">
+      <p class="font-inter mt-4 text-center md:text-start">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi nobis
         iste laboriosam quibusdam soluta corrupti, illum ea esse repellendus
         pariatur commodi sapiente perspiciatis minus obcaecati distinctio!
         Corporis, vitae! Earum, ullam?
       </p>
-      <p class="font-inter mt-4">
+      <p class="font-inter mt-4 text-center md:text-start">
         Feel free to reach out if you enjoy interesting conversation!
       </p>
     </div>
+    <div class="w-full my-6">
+      <Separator />
+    </div>
     <div>
-      <h2 class="mt-6 font-hepta font-bold text-3xl tracking-wider">
+      <h2
+        class="mt-6 font-hepta font-bold text-3xl tracking-wider text-center md:text-start"
+      >
         My Free Time
       </h2>
       <div class="grid-cols-4 grid gap-4 mt-4">
@@ -58,8 +58,13 @@ import Layout from "../layouts/Layout.astro";
         }
       </div>
     </div>
+    <div class="w-full my-6">
+      <Separator />
+    </div>
     <div class="mt-6 font-hepta pb-12">
-      <h2 class="mt-6 font-hepta font-bold text-3xl tracking-wider gap-4">
+      <h2
+        class="mt-6 font-hepta font-bold text-3xl tracking-wider gap-4 text-center md:text-start"
+      >
         Articles
       </h2>
       <div class="grid-cols-4 grid gap-4 mt-4">
